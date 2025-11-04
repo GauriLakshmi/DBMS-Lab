@@ -1,0 +1,15 @@
+DECLARE
+   A NUMBER := &A;
+   B NUMBER := &B;
+   OP CHAR(1) := '&OP'; 
+   RESULT NUMBER;
+BEGIN
+   CASE OP
+      WHEN '+' THEN RESULT:= A + B;
+      WHEN '-' THEN RESULT:= A-B;
+      WHEN '*' THEN RESULT := A*B;
+      WHEN '/' THEN RESULT:= A/B;
+   END CASE;
+      DBMS_OUTPUT.PUT_LINE(RESULT);
+END;
+/
